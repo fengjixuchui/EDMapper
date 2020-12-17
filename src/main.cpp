@@ -1,9 +1,9 @@
 #include "edmapper.hpp"
 
-
 int main(int argc, char** argv)
 {
 	// check if file exists.
+	
 	if (!std::filesystem::exists(argv[2]))
 	{
 		std::cerr << "[-]file path is invalid" << '\n';
@@ -18,9 +18,7 @@ int main(int argc, char** argv)
 	
 	std::unique_ptr<Edmapper::dll_map> dll = std::make_unique<Edmapper::dll_map>();
 
-	dll->dll_map_init(argv[1], argv[2]);
-
-	if (!dll->map_dll())
+	if (!dll->map_dll(argv[1], argv[2], argv[3]))
 	{
 		std::cerr << "[-]Failed to map dll." << '\n';
 		return -1;

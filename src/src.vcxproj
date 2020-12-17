@@ -147,6 +147,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="edmapper.hpp" />
+    <ClInclude Include="hook\iat_hook.hpp" />
+    <ClInclude Include="hook\shellcode.hpp" />
     <ClInclude Include="memory\memory_handlers.hpp" />
     <ClInclude Include="pe\portable_executable.hpp" />
   </ItemGroup>
